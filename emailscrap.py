@@ -17,7 +17,7 @@ result, data = mail.search(None, "UNSEEN")
  
 ids = data[0] # data is a list.
 id_list = ids.split() # ids is a space separated string
-latest_email_id = id_list[-3:] # get the latest
+latest_email_id = id_list[-3] # get the latest
  
 result, data = mail.fetch(latest_email_id, "(RFC822)") # fetch the email body (RFC822) for the given ID
  
